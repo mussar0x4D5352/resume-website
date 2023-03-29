@@ -87,7 +87,7 @@ header a {
 
 .intro img{
   border-radius: 50%;
-  float: left;
+  /* float: left; */
   display:inline-block;
   margin-right: 100px;
   margin-bottom: 100px;
