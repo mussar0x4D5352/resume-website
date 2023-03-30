@@ -10,8 +10,8 @@ body {
 }
 
 a{
-  text-decoration: none;
-  color: #082D49
+  text-decoration: underline;
+  color: inherit;
 }
 
 
@@ -87,7 +87,8 @@ header a {
 
 .intro img{
   border-radius: 50%;
-  /* float: left; */
+
+  float: left; /* this is actually important! */
   display:inline-block;
   margin-right: 100px;
   margin-bottom: 100px;
