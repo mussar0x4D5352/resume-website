@@ -29,7 +29,7 @@
         alt="Joshua Nussbaum Photo" height=375px;>
         <h2 class="section-title">Hi, I'm Joshua.</h2>
         <p class="byline">
-            You can also call me "Mussar". I'm a music teacher by day, hacker by night. This page will focus on data breaches, yadda yadda yadda, and etc. etc. etc. There's a lot of good information on the internet, and a bunch of it will wind up here. I'll also be including examples of my own work, which you can explore in more detail on my <a href="https://github.com/mussar0x4D5352" class="github">Github</a>. 
+            You can also call me "Mussar". I'm a music teacher by day, hacker by night. This page will focus on data breaches, exciting new vulnerabilities, and tech industry topics. There's a lot of good information on the internet, and a bunch of it will wind up here. I'll also be including examples of my own work, which you can explore in more detail on my <a href="https://github.com/mussar0x4D5352" class="github">Github</a>. 
         </p>
     </section>
 
@@ -67,12 +67,28 @@
 
         <!-- second blog post -->
         <article class="blog-post">
-            <img src="./assets/images/Image2.jpg" alt="Image-2">
+            <img src="https://imgs.xkcd.com/comics/password_strength.png" alt="The XKCD Comic this script is based on.">
             <div class="blog">
-                <h3></h3>
+                <h3>From Passwords to Passphrases</h3>
                 <h4>2023/03/29</h4>
                 <p>
-                    
+                    This is a small write-up on a tool I've been developing with the project name "Readable Nicephrases." Written in Python, it aims to help steer people away from passwords, which struggle with balancing security with ease of use, and towards more resilient methods of authentication. The script is still a work in progress, but a working demonstration is available at this <a href="https://github.com/mussar0x4D5352/readable-nicephrases">GitHub repo.</a>. 
+                </p>
+                <br>
+                <p>
+                    The inspiration for this came from <a href="https://xkcd.com/936">xkcd</a>, a popular webcomic that infuses a heavy dose of math, computer science, and well-meaning cynicism into its format. The comic illustrates a critical flaw in most passwords: a 12 character password - the minimum recommended length for a cryptographically secure key - is either going to be easy to remember but easy to crack, or difficult to crack but difficult to remember. In some cases, like the example presented in the comic, you can get passwords that are easy to crack AND difficult to remember.
+                </p>
+                <br>
+                <p>
+                    A passphrase, on the other hand, can be way longer while staying memorable. Even if the words are randomly selected, a phrase like "foul carrot check pirate" is going to stick into your mind. It's evocative, highly visual, and even without all the arbitrary requirements like mixed case and numbers, it would take millenia to try and brute force. I do think this could be improved, however - which is where Readable Nicephrases comes in.
+                </p>
+                <br>
+                <p>
+                    This script uses two libraries - the <a href="https://github.com/moreati/python-niceware">python port</a> of niceware (a library originally written in javascript by <a href="https://github.com/diracdeltas/niceware">bcrypt</a>), an implementation of this style of passphrase generation which has provided the wordlist we're using, and the <a href="https://www.nltk.org">Natural Language Toolkit</a>, abbreviated NLTK, a machine learning library that can process and categorize sentences to "understand" how they fit together. 
+                </p>
+                <br>
+                <p>
+                    NLTK processes the wordlist into different parts of speech - nouns, verbs, adjectives, etc. From there, a sentence structure like "Noun Verb Noun" or "Adjective Noun Verb" is randomly selected and given randomly assigned words. This final section is the simplest process, and gives us passphrases like "a pretension contending guiltily". Memorable, but also rather poetic. There's improvements to be made, to be sure, but my hope is that we can help usher people away from less secure practices towards more secure ones, even if it involves a couple of roundabouts on the way there.
                 </p>
             </div>
         </article>
